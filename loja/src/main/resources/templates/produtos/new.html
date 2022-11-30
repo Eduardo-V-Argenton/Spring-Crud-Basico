@@ -1,0 +1,28 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Novo Produto</title>
+
+</head>
+
+<body>
+    <div>
+        <form th:object="${produto}" action="/produtos" method="POST">
+            <div>
+                <label for="id">ID: </label>
+                <input type="text" id="id" th:field="*{id}">
+            </div>
+            <div>
+                <label for="name">Nome: </label>
+                <input type="text" id="name" th:field="*{nome}">
+            </div>
+            <div>
+                <label for="valor">Valor: </label>
+                <input type="text" id="valor" th:field="*{valor}">
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <a href="/produtos">Voltar</a><br>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Index</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <table>
+            <thead>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Valor</th>
+            </thead>
+            <tr th:each="Produto : ${lp}">
+            <td th:text="${Produto.id}">ID</td>
+            <td th:text="${Produto.nome}">Nome</td>
+            <td th:text="${Produto.valor}">Valor</td>
+            <td><a th:href="@{/produtos/{id}/edit(id = ${Produto.id})}">Editar</a></td>
+            <td><a th:href="@{/produtos/{id}/delete(id = ${Produto.id})}">Excluir</a></td>
+        </tr>
+        </table>
+        <a href="/produtos/new">Novo</a><br>
+    </body>
+</html>
