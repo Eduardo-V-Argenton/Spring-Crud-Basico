@@ -1,3 +1,3 @@
 # Spring-Crud-Basico
 
-Atividade avaliativa da disciplina de Programação Orientada a Objetos
+Apenas um exemplo de um CRUD em Spring
